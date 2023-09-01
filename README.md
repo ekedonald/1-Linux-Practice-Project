@@ -275,8 +275,10 @@ The rm command is used to delete files within directory. Make sure the user perf
 
 * Here's the general synthax:
 ```bash
-rm filename
+rm html.txt
 ```
+
+![rm_command1](./images/10.%20rm%20command1.png)
 
 * To remove multiple files, enter the following command:
 
@@ -284,11 +286,15 @@ rm filename
 rm ufc1.txt ufc2.txt ufc3.txt
 ```
 
+![rm_command2](./images/10.%20rm%20command2.png)
+
 * To remove a file giving a system confirmation prompt before deletion:
 
 ```bash
 rm -i ufc.txt
 ```
+
+![rm_command3](./images/10.%20rm%20command3.png)
 
 * To delete files without system confirmation is shown below:
 
@@ -296,11 +302,15 @@ rm -i ufc.txt
 rm -f  yaml.txt
 ```
 
+![rm_command4](./images/10.%20rm%20command4.png)
+
 * To delete files and directories recursively:
 
 ```bash
 rm -r Songs
 ```
+![rm_command5](./images/10.%20rm%20command5.png)
+
 
 ## 11. touch command:
 The touch command allows you to create an empty file and modify a timestamp in Linux command line.
