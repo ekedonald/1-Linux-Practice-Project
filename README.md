@@ -524,6 +524,7 @@ To check the status of jobs in the current shell, simply enter jobs to the CLI. 
 
 ## 24. kill command:
 Use the kill command to terminate an unresponsive program manually. It will signal misbehaving applications and instruct them to kill their processes.
+
 * To kill a program, you must know its process idenfication number (PID). If you don't know the PID, run the following command:
 
 ```bash
@@ -605,7 +606,7 @@ top
 ![top_command](./images/28.%20top%20command.png)
 
 ## 29. history:
-With history, the system will up to 500 previously executed commands, allowing you to reuse them without re-entering. Keep in mind that only users with sudo privileges can execute this command. How this utility runs also depends on Linux shell you use. To run it, enter the command below:
+With history, the system will display up to 500 previously executed commands, allowing you to reuse them without re-entering. Keep in mind that only users with sudo privileges can execute this command. How this utility runs also depends on Linux shell you use. To run it, enter the command below:
 
 ```bash
 history [option]
