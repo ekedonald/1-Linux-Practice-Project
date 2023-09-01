@@ -115,7 +115,7 @@ ls /home/ekeikenna/Learning_Linux
 
 ![ls_command2](./images/4.%20ls%20command2.png)
 
-Here are some options you can use with the ls command:
+Here are some flags you can use with the ls command:
 
 * lists all the files in the subdirectories:
 
@@ -123,11 +123,15 @@ Here are some options you can use with the ls command:
 ls -R
 ```
 
+![ls_command3](./images/4.%20ls%20command3.png)
+
 * shows hidden files in additon to the visible ones:
 
 ```bash
 ls -a
 ```
+
+![ls_command4](./images/4.%20ls%20command4.png)
 
 * shows the file sizes in easily readable formats, suhc as MB, GB and TB:
 
@@ -135,7 +139,7 @@ ls -a
 ls -lh
 ```
 
-![ls_command3](./images/4.%20ls%20command3.png)
+![ls_command5](./images/4.%20ls%20command5.png)
 
 ## 5. cat command:
 The concatenate "cat" command is the most frequently used Linux command. It lists, combines and writes file content to the standard output. To run the cat command, type cat followed by the file name and its extension. For instance:
@@ -381,9 +385,25 @@ df -h
 
 ![df_command1](./images/15.%20df%20command1.png)
 
-* The df command can be used in combination with flags such as -m (displays file system usage in MBs), -T (displays the file system type in a new column) and -k (displays file system usage in KBs) as shown below:
+* The df command in combination with -m displays file system usage in MBs as shown below:
 
 ![df_command2](./images/15.%20df%20command2.png)
+
+* The df command in combination with -T displays the file system in a new column as shwown below:
+
+```bash
+df -T
+```
+
+![df_command3](./images/15.%20df%20command3.png)
+
+* The df command in combination with -k displays the file system usage in KBs as shown below:
+
+```bash
+df -k
+```
+
+![df_command4](./images/15.%20df%20command4.png)
 
 ## 16. du command:
 The du command can be used to used to check how much space a file or directory takes up. It can be used to identify which part of the system uses the storage excessively.
@@ -396,9 +416,37 @@ du /home/ekeikenna/Learning_Linux/new_folder/Music/Music
 
 ![du_command1](./images/16.%20du%20command1.png)
 
-* Adding flags to the du command will modify the operation, such as: -s offers the total size of a specified folder, -m provides folder and file information in MBs, -k displays information in KBs and -h displays information in human readble form in GBs as shown below:
+* The du command in combination with -s offers the total size of a specified folder as shown below:
+
+```bash
+du -s
+```
 
 ![du_command2](./images/16.%20du%20command2.png)
+
+* The du command in combination with -m provides folder and file information in MBs as shown below:
+
+```bash
+du -m
+```
+
+![du_command3](./images/16.%20du%20command3.png)
+
+* The du command in combination with -k displays information in KBs as shown below:
+
+```bash
+du -k
+```
+
+![du_command4](./images/16.%20du%20command4.png)
+
+* The du command in combination with -h displays information in human readble form in GBs as shown below:
+
+```bash
+du -h
+```
+
+![du_command5](./images/16.%20du%20command5.png)
 
 ## 17. head command:
 The head command allows you to view the first 10 lines of a text. Adding an option lets you change the number of lines shown. The head command is also used to output piped date to CLI.
@@ -417,9 +465,25 @@ head document_list
 
 ![head_command1](./images/17.%20head%20command1.png)
 
-* Flags like -n or -lines prints the first customized number of lines. For example, enter head -n 5 document_list to show the first five lines of documnet_list, -c or -bytes prints the first customized number of bytes of each file, -q or -quiet will not print headers specifying the file name.They are shown below:
+* The head combination with -n or -lines prints the first customized number of lines. For example, enter head -n 5 document_list to show the first five lines of documnet_list as shown below:  
 
 ![head_command2](./images/17.%20head%20command2.png)
+
+* The head command in combination with -c or -bytes prints the first customized number of bytes of each file as shown below:
+
+```bash
+head -c 100 document_list
+```
+
+![head_command3](./images/17.%20head%20command3.png)
+
+* The head command in combination with -q or -quiet will not print headers specifying the file name as shown below:
+
+```bash
+head -q document_list
+```
+
+![head_command4](./images/17.%20head%20command4.png)
 
 ## 18. tail command:
 The tail command displays the last ten lines of a file. It allows users to check whether a file has a new data or read error messages. Here is the general format:
@@ -451,9 +515,21 @@ diff document_list document_list2
 
 ![diff_command1](./images/19.%20diff%20command1.png)
 
-* Flags such as -c displays the difference between two files in a context form and -u displays the output without redundant information. They are shown below:
+* The diff command in combination with -c displays the difference between two files in a context form as shown below:
+
+```bash
+diff -c document_list document_list2
+```
 
 ![diff_command2](./images/19.%20diff%20command2.png)
+
+The diff command in combination with -u displays the output without redundant information as shown below:
+
+```bash
+diff -u document_list document_list2
+```
+
+![diff_command3](./images/19.%20diff%20command3.png)
 
 ## 20. tar command:
 The tar command archives multiples files into a TAR file -a common Linux format similar to ZIP with optional compression. Here's the basic syntax:
@@ -470,9 +546,29 @@ tar -cvf newarchive.tar newfolder
 
 ![tar_command1](./images/20.%20tar%20command1.png)
 
-* The tar command accepts many options such as -x extracts a file, -t lists the content of a file and -u archives and adds to an existing archive file. They are shown below:
+* The tar command accepts many options such as -x extracts a file as shown below:
+
+```bash
+tar -xvf newarchive.tar
+```
 
 ![tar_command2](./images/20.%20tar%20command2.png)
+
+* The tar command in combination with -t lists the content of a compressed file as shown below:
+
+```bash
+tar -tf newarchive.tar
+```
+
+![tar_command3](./images/20.%20tar%20command3.png)
+
+* The tar command in combination with -u archives and adds to an existing archive file as shown below:
+
+```bash
+tar -uf newarchive.tar
+```
+
+![tar_command4](./images/20.%20tar%20command4.png)
 
 # File Permissions and Ownership
 ## 21. chmod command:
@@ -490,9 +586,29 @@ chmod 777 deploy1.yml deploy2.yml
 
 ![chmod_command1](./images/21.%20chmod%20command1.png)
 
-* This command suports many options including -c or -changes displays information when a change is made, -f or -silent suppresses the error messages and -v or -v verbose displays a diagnostic for each processed file as shown below:
+* The chmod command in combination with -c or -changes displays information when a change is made as shown below:
+
+```bash
+chmod -c 776 deploy1.yml
+```
 
 ![chmod_command2](./images/21.%20chmod%20command2.png)
+
+* The chmod command in combination with -f or -silent suppressed the error messages as shown below:
+
+```bash
+chmod -f 775 deploy1.yml
+```
+
+![chmod_command3](./images/21.%20chmod%20command3.png)
+
+* The chmod command in combination with -v or -verbose displays a diagnostic for each processed file as shown below:
+
+```bash
+chmod -v 774 deploy1.yml
+```
+
+![chmod_command4](./images/21.%20chmod%20command4.png)
 
 ## 22. chown command:
 The chown command lets you change the ownership of a file, directory or symbolic link to a specified username. Here's the basic format:
