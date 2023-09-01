@@ -82,6 +82,7 @@ Let's say you're in /home directory and want to go to a sub directory called eke
 ```bash
 cd ekeikenna
 ```
+
 ![cd_command1](./images/3.%20cd%20command1.png)
 
 If you want to switch to a completely new directory, for example: /home/ekeikenna/Learning_Linux, you have to enter the cd followed by the directory's absolute path:
@@ -118,6 +119,7 @@ ls /home/ekeikenna/Learning_Linux
 ![ls_command2](./images/4.%20ls%20command2.png)
 
 Here are some options you can use with the ls command:
+
 * lists all the files in the subdirectories:
 
 ```bash
@@ -327,6 +329,8 @@ The touch command allows you to create an empty file and modify a timestamp in L
 touch html.index
 ```
 
+![touch_command](./images/11.%20touch%20command.png)
+
 ## 12. locate command:
 The locate command can find a file in the database system. However, you have to update the database before you use the locate command to fetch a file. To udpate the database is show below:
 
@@ -337,6 +341,8 @@ The locate command can find a file in the database system. However, you have to 
 ```bash
 locate -i html*
 ```
+
+![locate_command](./images/12.%20locate%20command.png)
 
 ## 13. find command:
 The find command is used to search for files with a specific file directory  and perform susbsequent operations. Here's the general syntax:
@@ -350,6 +356,7 @@ find [path] [option] [expression]
 ```bash
 find /home -name index.html
 ```
+![find_command](./images/13.%20find%20command.png)
 
 # 14. grep command:
 The grep "global regular expression print" command lets you find a word by all through texts in a specific file. Once the grep command finds a match, it prints all lines that contain the specific pattern. This command helps filter through large log files.
@@ -359,6 +366,8 @@ The grep "global regular expression print" command lets you find a word by all t
 ```bash
 ls -l | grep snap
 ```
+
+![grep_command](./images/14.%20grep%20command.png)
 
 ## 15. df command:
 The df command is used to report the sysem's disk space, shwon in percentage and kilobyte (KB). Here's the general syntax:
@@ -373,7 +382,11 @@ df [options] [file]
 df -h
 ```
 
+![df_command1](./images/15.%20df%20command1.png)
+
 * The df command can be used in combination with flags such as -m (displays file system usage in MBs), -T (displays the file system type in a new column) and -k (displays file system usage in KBs) as shown below:
+
+![df_command2](./images/15.%20df%20command2.png)
 
 ## 16. du command:
 The du command can be used to used to check how much space a file or directory takes up. It can be used to identify which part of the system uses the storage excessively.
@@ -384,8 +397,11 @@ The du command can be used to used to check how much space a file or directory t
 du /home/ekeikenna/Learning_Linux/new_folder/Music/Music
 ```
 
+![du_command1](./images/16.%20du%20command1.png)
+
 * Adding flags to the du command will modify the operation, such as: -s offers the total size of a specified folder, -m provides folder and file information in MBs, -k displays information in KBs and -h displays information in human readble form in GBs as shown below:
 
+![du_command2](./images/16.%20du%20command2.png)
 ## 17. head command:
 The head command allows you to view the first 10 lines of a text. Adding an option lets you change the number of lines shown. The head command is also used to output piped date to CLI.
 
@@ -401,7 +417,11 @@ head [option] [file]
 head document_list
 ```
 
+![head_command1](./images/17.%20head%20command1.png)
+
 * Flags like -n or -lines prints the first customized number of lines. For example, enter head -n 5 document_list to show the first five lines of documnet_list, -c or -bytes prints the first customized number of bytes of each file, -q or -quiet will not print headers specifying the file name.They are shown below:
+
+![head_command2](./images/17.%20head%20command2.png)
 
 ## 18. tail command:
 The tail command displays the last ten lines of a file. It allows users to check whether a file has a new data or read error messages. Here is the general format:
@@ -409,11 +429,14 @@ The tail command displays the last ten lines of a file. It allows users to check
 ```bash
 tail [option] [file]
 ```
+
 * For example, you want to show the last ten lines of the document_list file:
 
 ```bash
 tail -10 document_list
 ```
+
+![tail_command](./images/18.%20tail%20command.png)
 
 ## 19. diff command:
 Short for difference, the diff command compares two contents of a file line by line. After analyzing them, it will display the parts that do not match. Programmers often use the diff command to alter a program instead of rewriting the entire source code. Here's the general format:
@@ -428,7 +451,11 @@ diff [option] file1 file2
 diff document_list document_list2
 ```
 
+![diff_command1](./images/19.%20diff%20command1.png)
+
 * Flags such as -c displays the difference between two files in a context form and -u displays the output without redundant information. They are shown below:
+
+![diff_command2](./images/19.%20diff%20command2.png)
 
 ## 20. tar command:
 The tar command archives multiples files into a TAR file -a common Linux format similar to ZIP with optional compression. Here's the basic syntax:
@@ -443,7 +470,11 @@ tar [options] [archive_file] [file or directory to be archived]
 tar -cvf newarchive.tar newfolder
 ```
 
+![tar_command1](./images/20.%20tar%20command1.png)
+
 * The tar command accepts many options such as -x extracts a file, -t lists the content of a file and -u archives and adds to an existing archive file. They are shown below:
+
+![tar_command2](./images/20.%20tar%20command2.png)
 
 # File Permissions and Ownership
 ## 21. chmod command:
@@ -459,7 +490,11 @@ chmod [option] [permission] [file_name]
 chmod 777 deploy1.yml deploy2.yml
 ```
 
+![chmod_command1](./images/21.%20chmod%20command1.png)
+
 * This command suports many options including -c or -changes displays information when a change is made, -f or -silent suppresses the error messages and -v or -v verbose displays a diagnostic for each processed file as shown below:
+
+![chmod_command2](./images/21.%20chmod%20command2.png)
 
 ## 22. chown command:
 The chown command lets you change the ownership of a file, directory or symbolic link to a specified username. Here's the basic format:
@@ -474,6 +509,8 @@ chown [options] owner[:group] file(s)
 sudo chown fabian deploy1.yml
 ```
 
+![chown_command](./images/22.%20chown%20command.png)
+
 ## 23. jobs command:
 A job is a process that the shell starts. The job commands will display all the running processes along with their statuses. Remember that this command is only available in csh, bash, tcsh and ksh shells. This is the basic syntax:
 
@@ -483,6 +520,8 @@ jobs [options] jobID
 
 To check the status of jobs in the current shell, simply enter jobs to the CLI. Here are some options you can use -l list process IDs along with their information, -n lists jobs whose statuses have changed since the last notification and -p lists process IDs only.
 
+![jobs_command](./images/23.%20jobs%20command.png)
+
 ## 24. kill command:
 Use the kill command to terminate an unresponsive program manually. It will signal misbehaving applications and instruct them to kill their processes.
 * To kill a program, you must know its process idenfication number (PID). If you don't know the PID, run the following command:
@@ -490,6 +529,8 @@ Use the kill command to terminate an unresponsive program manually. It will sign
 ```bash
 ps ux
 ```
+
+![ps_ux_command](./images/24.%20ps%20us%20command.png)
 
 * After knowing what signal to use adn the program's PID, enter the following syntax:
 
@@ -499,13 +540,15 @@ kill [signal_option] pid
 
 There are 64 signals that you can use, but these two are among the most commonly used:
 
-       image here. kill1
+![kill_command1](./images/24.%20kill%20command1.png)
 
 * SIGTERM request a program to stop running and gives it some time to save all its progress. The system will use this by default if you don't specify the signal when entering the kill command. SIGKILL forces program to stop and you will lose unsaved progress. For example, the program's POD is 63773 and you want to force it to stop:
 
 ```bash
 kill SIGKILL 63773
 ```
+
+![kill_command2](./images/24.%20kill%20command2.png)
 
 ## 25. ping command:
 The ping command is one of the most used basic Linux commands for checking whether a network or a server is reachable. In addition, it is used to troubleshoot various connectivity issues. Here's the general format:
@@ -519,6 +562,8 @@ ping [option] [hostname_or_IP_address]
 ```bash
 ping google.com
 ```
+
+![ping_command](./images/25.%20ping%20command.png)
 
 ## 26. wget command:
 The Linux command line lets you download files from the internet using the wget command. It wokrs in the background without hindering other running processes.
@@ -535,6 +580,8 @@ wget [option] [url]
 wget https://wordpress.org/latest.zip
 ```
 
+![]
+
 ## 27. uname command:
 The uname or unix name command will print detailed information about your Linux system and hardware. This includes the machine name, operating system and kernel. To run this command, simply enter uname into your CLI. Here's the basic syntax:
 
@@ -543,6 +590,8 @@ uname [option]
 ```
 
 * These are the acceptable options to use -a prints all the system information, -s prints the kernel name and -n prints the system's node hostname.
+
+![uname_command](./images/27.%20uname%20command.png)
 
 ## 28. top command:
 The top command in Linux Terminal will display all the running processes and dynamic real-time view of the current system. It sums up the resouce utilization from CPU to memory usage.
@@ -553,6 +602,8 @@ The top command can also help you identify and terminate a process that may use 
 top
 ```
 
+![top_command](./images/28.%20top%20command.png)
+
 ## 29. history:
 With history, the system will up to 500 previously executed commands, allowing you to reuse them without re-entering. Keep in mind that only users with sudo privileges can execute this command. How this utility runs also depends on Linux shell you use. To run it, enter the command below:
 
@@ -561,6 +612,8 @@ history [option]
 ```
 
 * This command supports many options, such as -c clears the complete history list, -d offset deletes the history entry at the OFFSET position and -a appends histroy lines.
+
+![history_command](./images/29.%20history%20command1.png)
 
 ## 30. man command:
 The man command provides a user manual of any commands or utilities you can run in Terminal including the name, description and options. It cosists of nine sections:
@@ -577,7 +630,9 @@ man [command_name]
 man ls
 ```
 
-* Enter this command if yyou want to specify the displayed section:
+![man_command](./images/30.%20man%20command.png)
+
+* Enter this command if you want to specify the displayed section:
 
 ```bash
 man [option] [section_number] [command_name]
@@ -613,6 +668,8 @@ zip [options] zipfile file1 file2
 zip archive.zip new.txt
 ```
 
+![zip_command](./images/32.%20zip%20command1.png)
+
 * On the other hand, unzip command extracts the zipped files from an archive. Here's the general format:
 
 ```bash
@@ -624,6 +681,8 @@ unzip [option] file_name.zip
 ```bash
 unzip archive.zip
 ```
+
+![unzip_command](./images/32.%20unzip%20command1.png)
 
 ## 33. hostname command:
 Run the hostname to know the system's hostname. You can execute it with or without an option. Here's the general syntax:
@@ -637,6 +696,8 @@ hostname [option]
 ```bash
 hostname -i
 ```
+
+![hostname_command](./images/33.%20hostname%20command.png)
 
 ## 34. adduser, deluser commands:
 Linux is a multi-user system meaning more than one person can use it simultaneously, adduser is used to create a new account while the passwd command allows you add/modify a password to a user. Only those with root privileges or sudo can run the adduser command.
@@ -669,6 +730,8 @@ passwd frank
 deluser frank
 ```
 
+![adduser_deluser_command](./images/34.%20adduser,%20deluser%20command.png)
+
 ## 35. apt-get command:
 apt-get is a command line for handling Advanced Package Tool (APT) libraries in Linux. It lets you retrieve information and bundles from auntheticated sources to mange, update, remove and install software and its dependencies. Runnig the apt-get command requires you to use sudo or root privileges.
 
@@ -684,14 +747,18 @@ apt-get [options] (command)
 apt-get update
 ```
 
+![apt_get_command](./images/35.%20apt-get%20command.png)
+
 ## 36. nano, vi, jed commands:
 Linux allows users to edit and manage files via text editor, such as nano, vi or jed. nano and vi come wiht the operating system, while jed has to be installed. 
 
-* The nano command denotes keywords and can work with most languages. To use it, enter the followuing command:
+* The nano command denotes keywords and can work with most languages. To use it, enter the following command:
 
 ```bash
 nano filename
 ```
+
+![nano_command](./images/36.%20nano%20command.png)
 
 * vi uses the two operating modes to work - insert and command. insert is used to edit and create a text file. On the other hand, the command performs operations such as saving, opening, copying and pasting a file. To use vi on a file, enter:
 
@@ -699,7 +766,11 @@ nano filename
 vi filename
 ```
 
+![vi_command](./images/36.%20vi%20command.png)
+
 * jed has a drop-down menu interface that allows users to perform actions without entering keyboard combinations or commands. Like vi, it has modes to load modules or plugins to write specific texts. To open the program, simply enter jed to then command line.
+
+![jed_command](./images/36.%20jed%20command.png)
 
 ## 37. alias, unalias commands:
 alias allows you to create a shortcut with the same functionality as a command, file name or text. When executed, it instructs the shell to replace one string with another. To use the alias command, enter this syntax:
@@ -714,11 +785,15 @@ alias Name=String
 alias l='ls -ltr'
 ```
 
+![alias_command](./images/37.%20alias%20command.png)
+
 * On the other hand, the unalias commadn deletes an existing alias. Here's what the general syntax looks like:
 
 ```bash
 unalias [alias_name]
 ```
+
+![unalias_command](./images/37.%20unalias%20command.png)
 
 ## 38. su commad:
 The switch user or su command allows you to run a program as a different user. It changes the adminstrative account in the current log-in session. This command is especially beneficial for accessing the system through SSH or using GUI display manager when the root user is unavailable. Here's the geberal syntax of the command:
@@ -730,6 +805,8 @@ su [options] [username [argument]]
 When executed without any option or argument, the su command runs through root privileges. It will prompt you to aunthenticate and ise the privileges temporarily.
 
 * Here are some acceptable options to use -p or -preserve environment keeps the same shell environment, consisting HOME, SHELL, USER and LOGNAME; -s or -shell lets you specify a different shell environment to run; -l or -login runs a login script to switch to a different username. Executing it requires you to enter the user's password.
+
+![su_command](./images/38.%20su%20command.png)
 
 ## 39. htop command:
 The htop command is an interactive program that monitors system resources and server processes in real time. It is available on most Linux distributions and you can install it usimng the default package manager.
@@ -746,13 +823,19 @@ htop [options]
 htop  -d 10
 ```
 
+![htop_command1](./images/39.%20htop%20command1.png)
+
 ```bash
 htop -C
 ```
 
+![htop_command2](./images/39.%20htop%20command2.png)
+
 ```bash
 htop -h
 ```
+
+![htop_command3](./images/39.%20htop%20command3.png)
 
 ## 40. ps command:
 The process status or ps command produces a snapshot of all running processes in your system.The static results are taken from the virtual files in the /proc file system.
@@ -760,3 +843,5 @@ The process status or ps command produces a snapshot of all running processes in
 Executing the ps command without an option or argument will list the running processes in the shell along with the unique process ID (PID), the type of the terminal (TTY), the running time (TIME) the command that launces the process (CMD)
 
 * Here are some acceptable options you can use: -T displays all processes associated witht he current shell session, -u username lists processes associated with a specific user, -A or -e shows all the running processes.
+
+![ps_command](./images/40.%20ps%20command.png)
