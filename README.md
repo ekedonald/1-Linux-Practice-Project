@@ -2,9 +2,9 @@
 ___
 
 ## Introduction to Linux and Basic Commands
-Linux is a family of open-source Unox operating systems based on the Linux Kernel. They include Ubuntu, Fedora, Debian, openSUSE and Red Hat. Using Linux to manage a Virtual Private Server (VPS) is common practice.
+Linux is a family of open-source Unix operating systems based on the Linux Kernel. They include Ubuntu, Fedora, Debian, openSUSE and Red Hat. Using Linux to manage a Virtual Private Server (VPS) is common practice.
 
-When operating Linux, you need to use a shell - a program that gives you access to the operating system's services. Most Linux distributions use a graphical user interface (GUI), making them beginner-friendly.
+When operating Linux, you need to use a shell (a program that gives you access to the operating system's services). Most Linux distributions use a graphical user interface (GUI), making them beginner-friendly.
 
 However, we recommend utilizing the command-line interface (CLI) because it's quicker and offers more control. Tasks that require multiple steps on the GUI can be done in a matter of seconds by entering commands into the CLI.
 
@@ -13,8 +13,7 @@ So if you want to use Linux, learning the common utilities or commands will go a
 ## What Is a Linux Command?
 A Linux command is a program or utility that runs on the CLI - a console that interacts with the system via texts and processes.
 
-It's similar to the Command Prompt application in Windows.
-Linux commands are executed on Terminal by pressing Enter at the end of the line. You can run commands to perform various tasks, from package installation to user management and file manipulation.
+It's similar to the Command Prompt application in Windows. Linux commands are executed on Terminal by pressing Enter at the end of the line. You can run commands to perform various tasks, from package installation to user management and file manipulation.
 
 Here's what a Linux command's general syntax looks like:
 
@@ -30,8 +29,6 @@ Parameter or argument specifies any necessary information for the command.
 
 ## TAKE NOTE
 1. All Linux commands are case-sensitive.
-
-2. For persons who do not have access to a linux machine you can access a light weight linux machine here free of charges Reacted.
 
 ## File Manipulation
 ## 1. sudo command:
@@ -203,13 +200,13 @@ cp -R /home/ekeikenna/Documents /home/ekeikenna/Documents_backup
 ![cp_command4](./images/6.%20cp%20command4.png)
 
 ## 7. mv command:
-The mv command is used to move and rename files and directories. Additionally, it doesn't produce an output upon execution. An example on how to use the mv command is shown below:
+The mv command is used to move and rename files and directories. Also, it doesn't produce an output upon execution. An example on how to use the mv command is shown below:
 
 ```bash
 mv somefile /home/ekeikenna/Learning_Linux/new_folder
 ```
 
-![mv_command1](./images/7.%20mv%20commnad1.png)
+![mv_command1](./images/7.%20mv%20command1.png)
 
 * You can also use the mv command to rename file:
 
@@ -220,7 +217,7 @@ mv somefile newfile
 ![mv_command2](./images/7.%20mv%20command2.png)
 
 ## 8. mkdir command:
-The mkdir command is used to create one or multiple directories at once and set permissions for each them. The user executing this command must have the privilege to make a new folder in the parent directory, or they may recieve a permission denied error. 
+The mkdir command is used to create one or multiple directories at once and set permissions for each them.  
 
 Here's the basic synthax:
 
@@ -228,7 +225,7 @@ Here's the basic synthax:
 mkdir [option] directory_name
 ```
 
-* For example, you want to create a directory called Music:
+* For example, you want to create a directory called *Music*:
 
 ```bash
 mkdir Music
@@ -236,7 +233,7 @@ mkdir Music
 
 ![mkdir_command1](./images/8.%20mkdir%20command1.png)
 
-* To make a new directory called Songs inside Music, use this command:
+* To make a new directory called *Songs* inside Music, use this command:
 
 ```bash
 mkdir Music/Songs
@@ -279,7 +276,7 @@ rmdir Music/2020
 ![rmdir_command](./images/9.%20rmdir%20command.png)
 
 ## 10. rm command:
-The rm command is used to delete files within directory. Make sure the user performing the command has write permissions. Remember the directory's location as this will remove file(s) and you can't undo it.
+The rm command is used to delete files within directory. The user performing the command must have write permissions. Remember the directory's location as this will remove file(s) and you can't undo it.
 
 * Here's the general synthax:
 ```bash
@@ -321,7 +318,7 @@ rm -r Songs
 ![rm_command5](./images/10.%20rm%20command5.png)
 
 ## 11. touch command:
-The touch command allows you to create an empty file and modify a timestamp in Linux command line.
+The touch command allows you to create an empty file.
 
 * For example, enter the following command to create an empty file:
 
@@ -345,7 +342,7 @@ locate -i html*
 ![locate_command](./images/12.%20locate%20command.png)
 
 ## 13. find command:
-The find command is used to search for files with a specific file directory  and perform susbsequent operations. Here's the general syntax:
+The find command is used to search for files with a specific file directory. Here's the general syntax:
 
 ```bash
 find [path] [option] [expression]
@@ -359,7 +356,7 @@ find /home -name index.html
 ![find_command](./images/13.%20find%20command.png)
 
 # 14. grep command:
-The grep "global regular expression print" command lets you find a word by all through texts in a specific file. Once the grep command finds a match, it prints all lines that contain the specific pattern. This command helps filter through large log files.
+The grep "global regular expression print" command lets you find a word by filtering through texts in a specific file. Once the grep command finds a match, it prints all lines that contain the specific pattern. This command helps filter through large log files.
 
 * An example of how to use grep is shown below:
 
@@ -370,7 +367,7 @@ ls -l | grep snap
 ![grep_command](./images/14.%20grep%20command.png)
 
 ## 15. df command:
-The df command is used to report the sysem's disk space, shwon in percentage and kilobyte (KB). Here's the general syntax:
+The df command is used to report the sysem's disk space, shown in percentage and kilobyte (KB). Here's the general syntax:
 
 ```bash
 df [options] [file]
@@ -402,6 +399,7 @@ du /home/ekeikenna/Learning_Linux/new_folder/Music/Music
 * Adding flags to the du command will modify the operation, such as: -s offers the total size of a specified folder, -m provides folder and file information in MBs, -k displays information in KBs and -h displays information in human readble form in GBs as shown below:
 
 ![du_command2](./images/16.%20du%20command2.png)
+
 ## 17. head command:
 The head command allows you to view the first 10 lines of a text. Adding an option lets you change the number of lines shown. The head command is also used to output piped date to CLI.
 
@@ -531,7 +529,7 @@ Use the kill command to terminate an unresponsive program manually. It will sign
 ps ux
 ```
 
-![ps_ux_command](./images/24.%20ps%20us%20command.png)
+![ps_ux_command](./images/24.%20ps%20ux%20command.png)
 
 * After knowing what signal to use adn the program's PID, enter the following syntax:
 
@@ -543,7 +541,7 @@ There are 64 signals that you can use, but these two are among the most commonly
 
 ![kill_command1](./images/24.%20kill%20command1.png)
 
-* SIGTERM request a program to stop running and gives it some time to save all its progress. The system will use this by default if you don't specify the signal when entering the kill command. SIGKILL forces program to stop and you will lose unsaved progress. For example, the program's POD is 63773 and you want to force it to stop:
+* SIGTERM (15) request a program to stop running and gives it some time to save all its progress. The system will use this by default if you don't specify the signal when entering the kill command. SIGKILL (9) forces program to stop and you will lose unsaved progress. For example, the program's PID is 63773 and you want to force it to stop:
 
 ```bash
 kill SIGKILL 63773
@@ -596,8 +594,6 @@ uname [option]
 
 ## 28. top command:
 The top command in Linux Terminal will display all the running processes and dynamic real-time view of the current system. It sums up the resouce utilization from CPU to memory usage.
-
-The top command can also help you identify and terminate a process that may use too many system resources. To run the command, simply enter top into the CLI.
 
 ```bash
 top
@@ -652,7 +648,22 @@ The echo command is a built-in utility that displays a line of text or string us
 echo [option] [string]
 ```
 
-This command supports many options, such as -n displays the output without the trailing newline, -e enables the interpretation of the following backlash escapes, \a plays sound alert, \b removes spaces in between a text, \c produces no further output and -E displays the default option and disables the interpretation of backlash escapes.
+This command supports many options which are shown below:
+
+* Using -e enables the interpreation of \c which produced after it's positon in the text.
+
+```bash
+echo -e "Lionel Messi \cin Miami"
+```
+
+![echo_command1](./images/31.%20echo%20command1.png)
+
+*  Using -e enables the interpretation of \b which removes the space before its position in the text.
+
+```bash
+echo -e "The \bWorld \bIs \bNot \bEnough"
+```
+![echo_command2](./images/31.%20echo%20command2.png)
 
 ## 32. zip, unzip commands:
 The zip command is used to compress your files into a ZIP file, a universal format commonly used on Linux. It can automatically choose the best compression ratio. The zip command is also useful for archiving files, directories and reducing disk usage. 
@@ -701,7 +712,7 @@ hostname -i
 ![hostname_command](./images/33.%20hostname%20command.png)
 
 ## 34. adduser, deluser commands:
-Linux is a multi-user system meaning more than one person can use it simultaneously, adduser is used to create a new account while the passwd command allows you add/modify a password to a user. Only those with root privileges or sudo can run the adduser command.
+Linux is a multi-user system meaning more than one person can use it simultaneously, adduser is used to create a new account while the passwd command allows modify a password for a specific user. Only those with root privileges or sudo can run the adduser command.
 
 When you use the adduser command, it performs some major changes. Edits the /etc/passwd, /etc/shadow, /etc/group and /etc/gshadow files for the newly created accounts. Creates and populates a home directory for the user. Sets file permissions and ownerships to the home directory. Here's the basic syntax:
 
@@ -818,7 +829,7 @@ Compared to the top command, htop has improvements and additonal features such a
 htop [options]
 ```
 
-* You can also add options such as -d or -delay shows the delay between updates in tenths of seconfs, -C or -no-color enables the monochrome mode, -h or -help displays the help message and exit.
+* The -d or -delay flag shows the delay between updates in tenths of seconds as shown below:
 
 ```bash
 htop  -d 10
@@ -826,11 +837,16 @@ htop  -d 10
 
 ![htop_command1](./images/39.%20htop%20command1.png)
 
+* The -C or -no-color flag enables the monochrome mode as shown below:
+
 ```bash
 htop -C
 ```
 
 ![htop_command2](./images/39.%20htop%20command2.png)
+
+* The -h or -help flag displays the the help message as shown below:
+
 
 ```bash
 htop -h
