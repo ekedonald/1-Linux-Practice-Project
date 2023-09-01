@@ -580,7 +580,7 @@ wget [option] [url]
 wget https://wordpress.org/latest.zip
 ```
 
-![]
+![wget_command](./images/26.%20wget%20command.png)
 
 ## 27. uname command:
 The uname or unix name command will print detailed information about your Linux system and hardware. This includes the machine name, operating system and kernel. To run this command, simply enter uname into your CLI. Here's the basic syntax:
