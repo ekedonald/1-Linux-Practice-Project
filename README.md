@@ -69,6 +69,8 @@ It has two acceptable options (flags):
 pwd
 ```
 
+![pwd_command](./images/2.%20pwd%20command.png)
+
 ## 3. cd command:
 The cd command is used to navigate through the Linux files and directories. Depending on your working directory, it requires either the full path or the directory name.
 
@@ -79,17 +81,23 @@ Let's say you're in /home directory and want to go to a sub directory called eke
 ```bash
 cd ekeikenna
 ```
+![cd_command1](./images/3.%20cd%20command1.png)
 
 If you want to switch to a completely new directory, for example: /home/ekeikenna/Learning_Linux, you have to enter the cd followed by the directory's absolute path:
  
  ```bash
 cd /home/ekeikenna/Learning_Linux
  ```
+
+![cd_command2](./images/3.%20cd%20command2.png)
+
 To move to the prevous directory. You enter the following command:
 
 ```bash
 cd ..
 ```
+
+![cd_command3](./images/3.%20cd%20command3.png)
 
 ## 4. ls command:
 The ls command is used to list files and directories running with a system. Running it without a flag will show the current working directory's content.
@@ -97,11 +105,14 @@ The ls command is used to list files and directories running with a system. Runn
 ```bash
 ls
 ```
+![ls_command1](./images/4.%20ls%20command1.png)
+
 To see other directory's content, type ls followed by the desired path. For example, to view files in the Learning_Linux folder, enter:
 
 ```bash
 ls /home/ekeikenna/Learning_Linux
 ```
+![ls_command2](./images/4.%20ls%20command2.png)
 
 Here are some options you can use with the ls command:
 * lists all the files in the subdirectories:
@@ -129,6 +140,8 @@ The concatenate "cat" command is the most frequently used Linux command. It list
 cat sim1.txt
 ```
 
+![cat_command1](./images/5.%20cat%20command1.png)
+
 Here are other ways to use the cat command, you can try this on your own:
 
 * Merge sim1.txt and sim2.txt and store the output in sim4.txt.
@@ -137,11 +150,15 @@ Here are other ways to use the cat command, you can try this on your own:
 cat sim1.txt sim2.txt > sim4.txt
 ```
 
+![cat_command2](./images/5.%20cat%20command2.png)
+
 * Displays content in reverse order.
 
 ```bash
 tac sim4.txt
 ```
+
+![cat_command3](./images/5.%20cat%20command3.png)
 
 ## 6. cp command:
 The command is used to copy the content of files or directories. Take a look at the following use cases:
@@ -151,12 +168,14 @@ The command is used to copy the content of files or directories. Take a look at 
 ```bash
 cp sim1.txt /home/ekeikenna/Learning_Linux/new_folder/
 ```
+![cp_command1](./images/6.%20cp%20command1.png)
 
 * To copy files to a directory, enter the file names followed by the destination directory. Follow the format below:
 
 ```bash
 cp sim1.txt sim2.txt sim3.txt /home/ekeikenna/Documents
 ```
+![cp_command2](./images/6.%20cp%20command2.png)
 
 * To copy the content of a file to a new file in the same directory, enter cp followed by the source file and the destination file as show below:
 
@@ -164,11 +183,14 @@ cp sim1.txt sim2.txt sim3.txt /home/ekeikenna/Documents
 cp sim1.txt sim4.txt
 ```
 
+![cp_command3](./images/6.%20cp%20command3.png)
+
 * To copy an entire directoy, pass the -R flag before typing the source directory, followed by the destination directory as shown below:
 
 ```bash
 cp -R /home/ekeikenna/Documents /home/ekeikenna/Documents_backup
 ```
+![cp_command4](./images/6.%20cp%20command4.png)
 
 ## 7. mv command:
 The mv command is used to move and rename files and directories. Additionally, it doesn't produce an output upon execution. An example on how to use the mv command is shown below:
@@ -177,11 +199,15 @@ The mv command is used to move and rename files and directories. Additionally, i
 mv somefile /home/ekeikenna/Learning_Linux/new_folder
 ```
 
+![mv_command1](./images/7.%20mv%20commnad1.png)
+
 * You can also use the mv command to rename file:
 
 ```bash
 mv somefile newfile
 ```
+
+![mv_command2](./images/7.%20mv%20command2.png)
 
 ## 8. mkdir command:
 The mkdir command is used to create one or multiple directories at once and set permissions for each them. The user executing this command must have the privilege to make a new folder in the parent directory, or they may recieve a permission denied error. 
@@ -192,11 +218,15 @@ Here's the basic synthax:
 mkdir [option] directory_name
 ```
 
+
+
 * For example, you want to create a directory called Music:
 
 ```bash
 mkdir Music
 ```
+
+![mkdir_command1](./images/8.%20mkdir%20command1.png)
 
 * To make a new directory called Songs inside Music, use this command:
 
@@ -204,12 +234,15 @@ mkdir Music
 mkdir Music/Songs
 ```
 
+![mkdir_command2](./images/8.%20mkdir%20command2.png)
+
 * The mkdir command accepts many such as: 
 -p or -parents create a directory between two existing folders. For example, mkdir -p Music/2020/Songs will make the new "2020" directory.
 
 ```bash
 mkdir -p Music/2020/Songs
 ```
+![mkdir_command3](./images/8.%20mkdir%20command3.png)
 
 * To create a directory with full read, write and execute permissions for all users, enter the following command:
 
@@ -217,11 +250,14 @@ mkdir -p Music/2020/Songs
 mkdir -m777 albums
 ```
 
+![mkdir_command4](./images/8.%20mkdir%20command4.png)
+
 To create a directory that prints a message for each created directory. Enter the following command:
 
 ```bash
 mkdir -v artists
 ```
+![mkdir_command5](./images/8.%20mkdir%20command5.png)
 
 ## 9. rmdir command:
 To permanently delete an empty directory, use the rmdir command. Remember that the user should have sudo privileges in the parent directory.
@@ -231,6 +267,8 @@ To permanently delete an empty directory, use the rmdir command. Remember that t
 ```bash
 rmdir Music/2020
 ```
+
+![rmdir_command](./images/9.%20rmdir%20command.png)
 
 ## 10. rm command:
 The rm command is used to delete files within directory. Make sure the user performing the command has write permissions. Remember the directory's location as this will remove file(s) and you can't undo it.
