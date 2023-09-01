@@ -35,9 +35,9 @@ Parameter or argument specifies any necessary information for the command.
 
 ## File Manipulation
 ## 1. sudo command:
-The sudo command stands for "super user do" and it lets you perform tasks that require adminstrative or root user permissions. When using the sudo command, the system will promt the user to auntheticate themselves with a password.
+The sudo command stands for "super user do" and it lets you perform tasks that require administrative or root user permissions. When using the sudo command, the system will prompt the user to aunthenticate themselves with a password.
 
-Then, the Linus system will launch a timestap as a tracker. By default, every user can run sudo commands for 15 minutes/session.
+Then, the Linux system will launch a timestap as a tracker. By default, every user can run sudo commands for 15 minutes/session.
 
 Here's the general syntax:
 
@@ -63,7 +63,8 @@ pwd [option]
 
 It has two acceptable options (flags):
 * -L or logical prints environment variable content, including symbolic links.
-* -P or physical prints the actual pth of the current directory.
+
+* -P or physical prints the actual path of the current directory.
 
 ```bash
 pwd
@@ -105,6 +106,7 @@ The ls command is used to list files and directories running with a system. Runn
 ```bash
 ls
 ```
+
 ![ls_command1](./images/4.%20ls%20command1.png)
 
 To see other directory's content, type ls followed by the desired path. For example, to view files in the Learning_Linux folder, enter:
@@ -112,6 +114,7 @@ To see other directory's content, type ls followed by the desired path. For exam
 ```bash
 ls /home/ekeikenna/Learning_Linux
 ```
+
 ![ls_command2](./images/4.%20ls%20command2.png)
 
 Here are some options you can use with the ls command:
@@ -132,6 +135,8 @@ ls -a
 ```bash
 ls -lh
 ```
+
+![ls_command3](./images/4.%20ls%20command3.png)
 
 ## 5. cat command:
 The concatenate "cat" command is the most frequently used Linux command. It lists, combines and writes file content to the standard output. To run the cat command, type cat followed by the file name and its extension. For instance:
@@ -168,6 +173,7 @@ The command is used to copy the content of files or directories. Take a look at 
 ```bash
 cp sim1.txt /home/ekeikenna/Learning_Linux/new_folder/
 ```
+
 ![cp_command1](./images/6.%20cp%20command1.png)
 
 * To copy files to a directory, enter the file names followed by the destination directory. Follow the format below:
@@ -175,6 +181,7 @@ cp sim1.txt /home/ekeikenna/Learning_Linux/new_folder/
 ```bash
 cp sim1.txt sim2.txt sim3.txt /home/ekeikenna/Documents
 ```
+
 ![cp_command2](./images/6.%20cp%20command2.png)
 
 * To copy the content of a file to a new file in the same directory, enter cp followed by the source file and the destination file as show below:
@@ -190,6 +197,7 @@ cp sim1.txt sim4.txt
 ```bash
 cp -R /home/ekeikenna/Documents /home/ekeikenna/Documents_backup
 ```
+
 ![cp_command4](./images/6.%20cp%20command4.png)
 
 ## 7. mv command:
@@ -217,8 +225,6 @@ Here's the basic synthax:
 ```bash
 mkdir [option] directory_name
 ```
-
-
 
 * For example, you want to create a directory called Music:
 
@@ -309,8 +315,8 @@ rm -f  yaml.txt
 ```bash
 rm -r Songs
 ```
-![rm_command5](./images/10.%20rm%20command5.png)
 
+![rm_command5](./images/10.%20rm%20command5.png)
 
 ## 11. touch command:
 The touch command allows you to create an empty file and modify a timestamp in Linux command line.
