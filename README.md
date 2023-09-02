@@ -6,10 +6,6 @@ Linux is a family of open-source Unix operating systems based on the Linux Kerne
 
 When operating Linux, you need to use a shell (a program that gives you access to the operating system's services). Most Linux distributions use a graphical user interface (GUI), making them beginner-friendly.
 
-However, we recommend utilizing the command-line interface (CLI) because it's quicker and offers more control. Tasks that require multiple steps on the GUI can be done in a matter of seconds by entering commands into the CLI.
-
-So if you want to use Linux, learning the common utilities or commands will go a long way.
-
 ## What Is a Linux Command?
 A Linux command is a program or utility that runs on the CLI - a console that interacts with the system via texts and processes.
 
@@ -179,7 +175,7 @@ cp sim1.txt /home/ekeikenna/Learning_Linux/new_folder/
 
 ![cp_command1](./images/6.%20cp%20command1.png)
 
-* To copy files to a directory, enter the file names followed by the destination directory. Follow the format below:
+* To copy files to a directory, enter the file names followed by the destination directory as shown below:
 
 ```bash
 cp sim1.txt sim2.txt sim3.txt /home/ekeikenna/Documents
@@ -187,7 +183,7 @@ cp sim1.txt sim2.txt sim3.txt /home/ekeikenna/Documents
 
 ![cp_command2](./images/6.%20cp%20command2.png)
 
-* To copy the content of a file to a new file in the same directory, enter cp followed by the source file and the destination file as show below:
+* To copy the content of a file to a new file in the same directory, enter cp followed by the source file and the destination file as shown below:
 
 ```bash
 cp sim1.txt sim4.txt
@@ -223,13 +219,13 @@ mv somefile newfile
 ## 8. mkdir command:
 The mkdir command is used to create one or multiple directories at once and set permissions for each them.  
 
-Here's the basic synthax:
+Here's the basic syntax:
 
 ```bash
 mkdir [option] directory_name
 ```
 
-* For example, you want to create a directory called *Music*:
+* For example, you want to create a directory called Music:
 
 ```bash
 mkdir Music
@@ -237,7 +233,7 @@ mkdir Music
 
 ![mkdir_command1](./images/8.%20mkdir%20command1.png)
 
-* To make a new directory called *Songs* inside Music, use this command:
+* To make a new directory called Songs inside Music, use this command:
 
 ```bash
 mkdir Music/Songs
@@ -282,7 +278,8 @@ rmdir Music/2020
 ## 10. rm command:
 The rm command is used to delete files within directory. The user performing the command must have write permissions. Remember the directory's location as this will remove file(s) and you can't undo it.
 
-* Here's the general synthax:
+* Here's the general syntax:
+
 ```bash
 rm html.txt
 ```
@@ -337,7 +334,7 @@ The locate command can find a file in the database system. However, you have to 
 
 `sudo updatedb`
 
-* Moreover, adding -i argument will turn off case sensitivity so you can search for a file even if you don't remember the exact name. The asterisk (*) wildcard can be used in combination to look for content that contains two or more words as show below:
+* Moreover, adding -i argument will turn off case sensitivity so you can search for a file even if you don't remember the exact name. The asterisk (*) wildcard can be used in combination to look for content that contains two or more words as shown below:
 
 ```bash
 locate -i html*
@@ -647,7 +644,7 @@ ps ux
 
 ![ps_ux_command](./images/24.%20ps%20ux%20command.png)
 
-* After knowing what signal to use adn the program's PID, enter the following syntax:
+* After knowing what signal to use add the program's Process ID (PID), enter the following syntax:
 
 ```bash
 kill [signal_option] pid
@@ -657,7 +654,7 @@ There are 64 signals that you can use, but these two are among the most commonly
 
 ![kill_command1](./images/24.%20kill%20command1.png)
 
-* SIGTERM (15) request a program to stop running and gives it some time to save all its progress. The system will use this by default if you don't specify the signal when entering the kill command. SIGKILL (9) forces program to stop and you will lose unsaved progress. For example, the program's PID is 63773 and you want to force it to stop:
+* SIGTERM (15) requests a program to stop running and gives it some time to save all its progress. The system will use this by default if you don't specify the signal when entering the kill command. SIGKILL (9) forces program to stop and you will lose unsaved progress. For example, the program's PID is 63773 and you want to force it to stop:
 
 ```bash
 kill SIGKILL 63773
@@ -681,9 +678,7 @@ ping google.com
 ![ping_command](./images/25.%20ping%20command.png)
 
 ## 26. wget command:
-The Linux command line lets you download files from the internet using the wget command. It wokrs in the background without hindering other running processes.
-
-The wget command retrives files using HTTP, HTTPs and FTP protocols. It can perform recursive download which transfer website parts by follwoing directory structures and link creating local versions of the web pages. To use it, enter the following command:
+The Linux command line lets you download files from the internet using the wget command. It works in the background without hindering other running processes. To use it, enter the following command:
 
 ```bash
 wget [option] [url]
@@ -852,13 +847,15 @@ adduser frank
 passwd frank
 ```
 
+![adduser_passwd_command](./images/34.%20adduser,%20passwd%20command.png)
+
 * To delete a user account, use the deluser commmand:
 
 ```bash
 deluser frank
 ```
 
-![adduser_deluser_command](./images/34.%20adduser,%20deluser%20command.png)
+![deluser_command](./images/34.%20deluser%20command.png)
 
 ## 35. apt-get command:
 apt-get is a command line for handling Advanced Package Tool (APT) libraries in Linux. It lets you retrieve information and bundles from auntheticated sources to mange, update, remove and install software and its dependencies. Runnig the apt-get command requires you to use sudo or root privileges.
@@ -869,7 +866,7 @@ apt-get is a command line for handling Advanced Package Tool (APT) libraries in 
 apt-get [options] (command)
 ```
 
-* These are the most common you can add to apt-get: updae synchronizes the package files from their sources, upgrade installs the lastes version of all installed packages, check updates the package cache and checks broken dependencies.
+* The apt-get: update synchronizes the package files from their sources, upgrade installs the lastes version of all installed packages, checks updates the package cache and checks broken dependencies.
 
 ```bash
 apt-get update
@@ -930,7 +927,7 @@ The switch user or su command allows you to run a program as a different user. I
 su [options] [username [argument]]
 ```
 
-When executed without any option or argument, the su command runs through root privileges. It will prompt you to aunthenticate and ise the privileges temporarily.
+When executed without any option or argument, the su command runs through root privileges. It will prompt you to aunthenticate and use the privileges temporarily.
 
 * Here are some acceptable options to use -p or -preserve environment keeps the same shell environment, consisting HOME, SHELL, USER and LOGNAME; -s or -shell lets you specify a different shell environment to run; -l or -login runs a login script to switch to a different username. Executing it requires you to enter the user's password.
 
