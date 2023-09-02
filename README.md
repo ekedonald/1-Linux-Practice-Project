@@ -973,8 +973,28 @@ htop -h
 ## 40. ps command:
 The process status or ps command produces a snapshot of all running processes in your system.The static results are taken from the virtual files in the /proc file system.
 
-Executing the ps command without an option or argument will list the running processes in the shell along with the unique process ID (PID), the type of the terminal (TTY), the running time (TIME) the command that launces the process (CMD)
+Executing the ps command without an option or argument will list the running processes in the shell along with the unique process ID (PID), the type of the terminal (TTY), the running time (TIME) the command that launches the process (CMD).
 
-* Here are some acceptable options you can use: -T displays all processes associated witht he current shell session, -u username lists processes associated with a specific user, -A or -e shows all the running processes.
+* The ps command in combination with -T displays all processes associated witht he current shell session as shown below:
+
+```bash
+ps -T
+```
 
 ![ps_command](./images/40.%20ps%20command.png)
+
+* The ps command in cobination with -u username lists processes associated with a specific user as shown below: 
+
+```bash
+ps -u
+```
+
+![ps_command2](./images/40.%20ps%20command2.png)
+
+* The ps command in combination with -A or -e shows all the running processes as shown below:
+
+```bash
+ps -A
+```
+
+![ps_command3](./images/40.%20ps%20command3.png)
