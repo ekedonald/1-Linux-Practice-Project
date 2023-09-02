@@ -569,7 +569,7 @@ tar -uf newarchive.tar
 
 # File Permissions and Ownership
 ## 21. chmod command:
-The chmod command modifies a fiel or directory's read, write and execute permissions. In Linux, each file is associated with 3 user classes - owner, group member and others. Here's the basic syntax:
+The chmod command modifies a file or directory's read, write and execute permissions. In Linux, each file is associated with 3 user classes - owner, group member and others. Here's the basic syntax:
 
 ```bash
 chmod [option] [permission] [file_name]
@@ -849,7 +849,7 @@ passwd frank
 
 ![adduser_passwd_command](./images/34.%20adduser,%20passwd%20command.png)
 
-* To delete a user account, use the deluser commmand:
+* To delete a user account, use the deluser commmand as shown below:
 
 ```bash
 deluser frank
@@ -858,7 +858,7 @@ deluser frank
 ![deluser_command](./images/34.%20deluser%20command.png)
 
 ## 35. apt-get command:
-apt-get is a command line for handling Advanced Package Tool (APT) libraries in Linux. It lets you retrieve information and bundles from auntheticated sources to mange, update, remove and install software and its dependencies. Runnig the apt-get command requires you to use sudo or root privileges.
+apt-get is a command line for handling Advanced Package Tool (APT) libraries in Linux. It lets you retrieve information and bundles from auntheticated sources to mange, update, remove and install software and its dependencies. Running the apt-get command requires you to use sudo or root privileges.
 
 * Here's the main syntax:
 
