@@ -988,7 +988,7 @@ ps -u
 
 ![ps_command2](./images/40.%20ps%20command2.png)
 
-* The ps command in combination with -A or -e shows all the running processes as shown below:
+* The ps command in combination with -A or -e flag shows all the running processes as shown below:
 
 ```bash
 ps -A
